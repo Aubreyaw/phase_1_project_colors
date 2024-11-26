@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Fetched data:", data);
         const colors = data;
 
+        const appContainer = document.getElementById("app-container");
+        appContainer.classList.add("#app-container")
+        // add style
+        const colorContainer = document.getElementById("color-viewer");
+        colorContainer.classList.add("#color-viewer")
+        // add style
+        const previewSection = document.getElementById("preview-section");
+        previewSection.classList.add("#preview-section");
+        // add style
+      
+
     })
 })
     
