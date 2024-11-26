@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const colorInfoDiv = document.createElement("div");
         colorInfoDiv.classList.add("#div");
         // add style
-        const colorDiv = document.createElement("div");
-        colorDiv.classList.add("#div");
+        const colorSwatchDiv = document.createElement("div");
+        colorSwatchDiv.classList.add("#div");
         // add style
        
         likeButton.addEventListener('mouseenter', () => {
@@ -76,27 +76,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         colors.forEach(color => {
             currentColorId = color.id;
-            const colorDiv = document.createElement("div");
-            colorDiv.classList.add("color-swatch");
-            colorDiv.style.backgroundColor = color.hex;
-            colorDiv.style.width = "60px"
-            colorDiv.style.height = "60px"
-            colorDiv.style.borderRadius = "10px";
-            colorDiv.style.display = "flex";
-            colorDiv.style.justifyContent = "center";
-            colorDiv.style.alignItems = "center";
+            const colorSwatchDiv = document.createElement("div");
+            colorSwatchDiv.classList.add("color-swatch");
+            colorSwatchDiv.style.backgroundColor = color.hex;
+            colorSwatchDiv.style.width = "60px"
+            colorSwatchDiv.style.height = "60px"
+            colorSwatchDiv.style.borderRadius = "10px";
+            colorSwatchDiv.style.display = "flex";
+            colorSwatchDiv.style.justifyContent = "center";
+            colorSwatchDiv.style.alignItems = "center";
 
-            colorDiv.addEventListener('mouseenter', () => {
-                colorDiv.style.transform = 'scale(1.1)';
-                colorDiv.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)';
+            colorSwatchDiv.addEventListener('mouseenter', () => {
+                colorSwatchDiv.style.transform = 'scale(1.1)';
+                colorSwatchDiv.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)';
             });
 
-            colorDiv.addEventListener('mouseleave', () => {
-                colorDiv.style.transform = 'scale(1)';
-                colorDiv.style.boxShadow = 'none';
+            colorSwatchDiv.addEventListener('mouseleave', () => {
+                colorSwatchDiv.style.transform = 'scale(1)';
+                colorSwatchDiv.style.boxShadow = 'none';
             });
 
-            colorContainer.appendChild(colorDiv)
+            colorContainer.appendChild(colorSwatchDiv)
 
            
 
