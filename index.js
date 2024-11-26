@@ -148,6 +148,11 @@ document.addEventListener("DOMContentLoaded", function () {
                                 colorPreview.style.backgroundColor = swatch.hex;
                                 colorPreview.classList.add("swatch-preview");
                                 swatchList.style.listStyleType = "none";
+                                swatchList.style.cursor = "pointer";
+                                swatchList.style.padding = 0;
+                                swatchList.style.margin = 0;
+                                swatchList.style.display = "grid";
+                                swatchList.style.gap = "10px";
                                 swatchItem.appendChild(colorPreview);
 
                                 swatchList.appendChild(swatchItem);
