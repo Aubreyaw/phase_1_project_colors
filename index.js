@@ -86,6 +86,20 @@ document.addEventListener("DOMContentLoaded", () => {
             colorDiv.style.justifyContent = "center";
             colorDiv.style.alignItems = "center";
 
+            colorDiv.addEventListener('mouseenter', () => {
+                colorDiv.style.transform = 'scale(1.1)';
+                colorDiv.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)';
+            });
+
+            colorDiv.addEventListener('mouseleave', () => {
+                colorDiv.style.transform = 'scale(1)';
+                colorDiv.style.boxShadow = 'none';
+            });
+
+            colorContainer.appendChild(colorDiv)
+
+           
+
         });
     })
     
