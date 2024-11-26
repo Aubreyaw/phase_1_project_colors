@@ -21,7 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // add style
         const likeButton = document.createElement("button"); 
         likeButton.classList.add("#button");
-        // add style
+        likeButton.textContent = '♡';  
+        likeButton.style.cursor = "pointer";
+        likeButton.style.color = "red";
+        likeButton.style.borderColor = "white";
+
         const swatchList = document.createElement("ul");
         swatchList.classList.add("#ul");
         // add style
@@ -31,6 +35,21 @@ document.addEventListener("DOMContentLoaded", () => {
         const colorDiv = document.createElement("div");
         colorDiv.classList.add("#div");
         // add style
+
+        let currentColorId = null;
+        let isLiked = false;
+
+        likeButton.addEventListener('mouseenter', () => {
+            likeButton.style.transform = 'scale(1.1)';
+            likeButton.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)';
+        });
+
+        likeButton.addEventListener('mouseleave', () => {
+            likeButton.style.transform = 'scale(1)';
+            likeButton.style.boxShadow = 'none';
+        });
+
+
     })
     
 })
