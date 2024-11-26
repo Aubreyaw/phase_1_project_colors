@@ -1,0 +1,616 @@
+{
+  "colors": [
+    {
+      "id": "1",
+      "name": "Red",
+      "hex": "#FF0000",
+      "comment": "",
+      "likes": true,
+      "swatches": [
+        {
+          "name": "Red",
+          "hex": "#FF0000",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Light Red",
+          "hex": "#FF6666",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Salmon",
+          "hex": "#FF7F7F",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Crimson",
+          "hex": "#DC143C",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Firebrick",
+          "hex": "#B22222",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Red",
+          "hex": "#8B0000",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Maroon",
+          "hex": "#800000",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Red-Orange",
+      "hex": "#FF6106",
+      "comment": "",
+      "likes": false,
+      "swatches": [
+        {
+          "name": "Red-Orange",
+          "hex": "#FF6106",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Light Coral",
+          "hex": "#FF8C69",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Coral",
+          "hex": "#FF7F50",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Burnt Orange",
+          "hex": "#FF4500",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Tomato",
+          "hex": "#FF6347",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Salmon",
+          "hex": "#E9967A",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Deep Red-Orange",
+          "hex": "#CD3700",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Orange",
+      "hex": "#FF9C00",
+      "comment": "",
+      "likes": false,
+      "swatches": [
+        {
+          "name": "Orange",
+          "hex": "#FF9C00",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Peach",
+          "hex": "#FFE5B4",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Apricot",
+          "hex": "#FBCEB1",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Bright Orange",
+          "hex": "#FFA500",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Tangerine",
+          "hex": "#FFCC00",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Burnt Orange",
+          "hex": "#CC5500",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Orange",
+          "hex": "#FF8C00",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Yellow-Orange",
+      "hex": "#FFD700",
+      "comment": "",
+      "likes": false,
+      "swatches": [
+        {
+          "name": "Yellow-Orange",
+          "hex": "#FFD700",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Pale Gold",
+          "hex": "#E6BE8A",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Amber",
+          "hex": "#FFBF00",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Golden Yellow",
+          "hex": "#FFC107",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Honey",
+          "hex": "#F2C649",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Deep Saffron",
+          "hex": "#FF9933",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Amber",
+          "hex": "#FF8C00",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Yellow",
+      "hex": "#FFFF00",
+      "comment": "",
+      "likes": false,
+      "swatches": [
+        {
+          "name": "Yellow",
+          "hex": "#FFFF00",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Light Yellow",
+          "hex": "#FFFFE0",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Lemon Yellow",
+          "hex": "#FFF44F",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Goldenrod",
+          "hex": "#FFD700",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Gold",
+          "hex": "#FFA500",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Goldenrod",
+          "hex": "#B8860B",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Mustard",
+          "hex": "#FFDB58",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Yellow-Green",
+      "hex": "#ADFF2F",
+      "comment": "",
+      "likes": false,
+      "swatches": [
+        {
+          "name": "Yellow-Green",
+          "hex": "#ADFF2F",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Pale Green",
+          "hex": "#98FB98",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Chartreuse",
+          "hex": "#7FFF00",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Lime",
+          "hex": "#00FF00",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Olive",
+          "hex": "#808000",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Olive Drab",
+          "hex": "#6B8E23",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Olive Green",
+          "hex": "#556B2F",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Green",
+      "hex": "#2CE663",
+      "comment": "",
+      "likes": false,
+      "swatches": [
+        {
+          "name": "Green",
+          "hex": "#2CE663",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Light Green",
+          "hex": "#90EE90",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Lime Green",
+          "hex": "#32CD32",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Spring Green",
+          "hex": "#00FF7F",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Emerald Green",
+          "hex": "#50C878",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Forest Green",
+          "hex": "#228B22",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Green",
+          "hex": "#006400",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Blue-Green",
+      "hex": "#02C6ED",
+      "comment": "",
+      "likes": true,
+      "swatches": [
+        {
+          "name": "Blue-Green",
+          "hex": "#02C6ED",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Aqua",
+          "hex": "#00FFFF",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Turquoise",
+          "hex": "#40E0D0",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Teal",
+          "hex": "#008080",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Cyan",
+          "hex": "#00CED1",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Deep Turquoise",
+          "hex": "#00B2EE",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Cyan",
+          "hex": "#008B8B",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Blue",
+      "hex": "#0355D9",
+      "comment": "",
+      "likes": true,
+      "swatches": [
+        {
+          "name": "Blue",
+          "hex": "#0355D9",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Light Blue",
+          "hex": "#ADD8E6",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Sky Blue",
+          "hex": "#87CEEB",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Cornflower Blue",
+          "hex": "#6495ED",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Royal Blue",
+          "hex": "#4169E1",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Navy Blue",
+          "hex": "#000080",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Midnight Blue",
+          "hex": "#191970",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Indigo",
+      "hex": "#3B07D9",
+      "comment": "",
+      "likes": false,
+      "swatches": [
+        {
+          "name": "Indigo",
+          "hex": "#3B07D9",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Periwinkle",
+          "hex": "#CCCCFF",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Slate Blue",
+          "hex": "#6A5ACD",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Medium Purple",
+          "hex": "#9370DB",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Royal Purple",
+          "hex": "#7851A9",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Indigo",
+          "hex": "#4B0082",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Slate Blue",
+          "hex": "#483D8B",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Purple",
+      "hex": "#5D07D9",
+      "comment": "",
+      "likes": false,
+      "swatches": [
+        {
+          "name": "Purple",
+          "hex": "#5D07D9",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Lavender",
+          "hex": "#E6E6FA",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Thistle",
+          "hex": "#D8BFD8",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Violet",
+          "hex": "#EE82EE",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Plum",
+          "hex": "#DDA0DD",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Orchid",
+          "hex": "#9932CC",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Purple",
+          "hex": "#4B0082",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Pink",
+      "hex": "#C71585",
+      "comment": "",
+      "likes": false,
+      "swatches": [
+        {
+          "name": "Pink",
+          "hex": "#C71585",
+          "comment": "",
+          "likes": true
+        },
+        {
+          "swatch-name": "Orchid",
+          "hex": "#DA70D6",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Hot Pink",
+          "hex": "#FF69B4",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Fuchsia",
+          "hex": "#FF00FF",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Dark Magenta",
+          "hex": "#8B008B",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Deep Pink",
+          "hex": "#FF1493",
+          "comment": "",
+          "likes": false
+        },
+        {
+          "swatch-name": "Mulberry",
+          "hex": "#C71585",
+          "comment": "",
+          "likes": false
+        }
+      ]
+    }
+  ]
+}
