@@ -73,6 +73,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("No color selected!");
             }
         }); 
+
+        colors.forEach(color => {
+            currentColorId = color.id;
+            const colorDiv = document.createElement("div");
+            colorDiv.classList.add("color-swatch");
+            colorDiv.style.backgroundColor = color.hex;
+            colorDiv.style.width = "60px"
+            colorDiv.style.height = "60px"
+            colorDiv.style.borderRadius = "10px";
+            colorDiv.style.display = "flex";
+            colorDiv.style.justifyContent = "center";
+            colorDiv.style.alignItems = "center";
+
+        });
     })
     
 })
