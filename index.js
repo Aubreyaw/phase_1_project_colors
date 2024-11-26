@@ -35,10 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const colorDiv = document.createElement("div");
         colorDiv.classList.add("#div");
         // add style
-
-        let currentColorId = null;
-        let isLiked = false;
-
+       
         likeButton.addEventListener('mouseenter', () => {
             likeButton.style.transform = 'scale(1.1)';
             likeButton.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)';
@@ -49,7 +46,33 @@ document.addEventListener("DOMContentLoaded", () => {
             likeButton.style.boxShadow = 'none';
         });
 
+        let currentColorId = null;
+        let isLiked = false;
 
+        likeButton.addEventListener("click", () => {
+            if (currentColorId) {
+                const patchUrl = `${url}/${currentColorId}`;
+                isLiked = !isLiked;
+                const likesValue = isLiked;
+                likeButton.textContent = isLiked ? "♥" : "♡";
+                fetch(patchUrl, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ likes: likesValue }),
+                })
+                    .then(response => response.json())
+                    .then(updatedColor => {
+                        console.log("Updated color:", updatedColor);
+                    })
+                    .catch(error => {
+                        console.error("Error updating color:", error);
+                    });
+            } else {
+                console.error("No color selected!");
+            }
+        }); 
     })
     
 })
