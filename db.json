@@ -566,7 +566,7 @@
       "name": "Pink",
       "hex": "#C71585",
       "comment": "",
-      "likes": false,
+      "likes": true,
       "swatches": [
         {
           "name": "Pink",

@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
             colorContainer.style.display = "flex";
             colorContainer.style.justifyContent = "flex-start";
             colorContainer.style.alignItems = "center"; 
-            colorContainer.style.gap = "10px"; 
-            colorContainer.style.padding = "10px";
+            colorContainer.style.gap = "40px"; 
+            colorContainer.style.padding = "30px";
             colorContainer.style.width = "100%";
             colorContainer.style.overflowX = "auto";
 
@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const colorSwatchDiv = document.createElement("div");
                 colorSwatchDiv.classList.add("color-swatch");
                 colorSwatchDiv.style.backgroundColor = color.hex;
-                colorSwatchDiv.style.width = "60px"
-                colorSwatchDiv.style.height = "60px"
+                colorSwatchDiv.style.width = "80px"
+                colorSwatchDiv.style.height = "80px"
                 colorSwatchDiv.style.borderRadius = "10px";
                 colorSwatchDiv.style.display = "flex";
                 colorSwatchDiv.style.justifyContent = "center";
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         previewSection.appendChild(swatchList);
 
                     }
-                    console.log("Swatches:", color.swatches);
+                    // console.log("Swatches:", color.swatches);
                 });
                 
             });
