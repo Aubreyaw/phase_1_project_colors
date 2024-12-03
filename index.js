@@ -8,11 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const colors = data;
 
             // elements //
-            const appContainer = document.getElementById("app-container");
-            appContainer.style.display = "flex";
-            appContainer.style.flexDirection = "column";
-            appContainer.style.alignItems = "center";
-            
+            //removed appContainer
+            const listSection = document.getElementById("list-section");
+
             const colorContainer = document.getElementById("color-container");
             colorContainer.style.display = "flex";
             colorContainer.style.justifyContent = "flex-start";
@@ -43,14 +41,23 @@ document.addEventListener("DOMContentLoaded", function () {
             swatchList.style.listStyleType = "none";
 
             const colorInfoDiv = document.createElement("div");
-
+            previewSection.appendChild(colorInfoDiv);
             const colorSwatchDiv = document.createElement("div");
             colorSwatchDiv.classList.add("color-swatch");
 
             // elements //
 
-            // Like button stuff //
-            
+            // Add hover effects //
+            function addHoverEffects(element) {
+                element.addEventListener('mouseenter', () => {
+                    element.style.transform = 'scale(1.1)';
+                    element.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)';
+                });
+                element.addEventListener('mouseleave', () => {
+                    element.style.transform = 'scale(1)';
+                    element.style.boxShadow = 'none';
+                });
+            }
 
             likeButton.addEventListener('mouseenter', () => {
                 likeButton.style.transform = 'scale(1.1)';
@@ -96,6 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // Start to iterate through colors //
             colors.forEach(color => {
                 currentColorId = color.id;
+
+                
+
                 const colorSwatchDiv = document.createElement("div");
                 colorSwatchDiv.classList.add("color-swatch");
                 colorSwatchDiv.style.backgroundColor = color.hex;
@@ -171,10 +181,12 @@ document.addEventListener("DOMContentLoaded", function () {
                                 });
 
                         });
-                        previewSection.appendChild(swatchList);
+                        listSection.appendChild(swatchList);
+
+                        
 
                     }
-                    // console.log("Swatches:", color.swatches);
+                    console.log("Swatches:", color.swatches);
                 });
                 
             });
@@ -183,3 +195,27 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Error:", error);
         });
 });
+
+
+// /* Create three equal columns that float next to each other */
+// .column {
+//     float: left;
+//     width: 33.33%;
+//   }
+  
+//   /* Clear floats after the columns */
+//   .row:after {
+//     content: "";
+//     display: table;
+//     clear: both;
+//   }
+  
+//   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+//   @media screen and (max-width: 600px) {
+//     .column {
+//       width: 100%;
+//     }
+//   }
+/*
+
+*/
