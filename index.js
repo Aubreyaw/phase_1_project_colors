@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             //// Like button stuff ////
 
-
             // Start to iterate through colors //
             colors.forEach(color => {
                 currentColorId = color.id;
@@ -104,8 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 colorSwatchDiv.style.alignItems = "center";
 
                 addHoverEffects(colorSwatchDiv);
-
-                    colorContainer.appendChild(colorSwatchDiv)
+                colorContainer.appendChild(colorSwatchDiv)
 
                 colorSwatchDiv.addEventListener("click", function () {
 
@@ -134,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                                 const swatchItem = document.createElement("li");
                                 const colorPreview = document.createElement("div");
+                                
                                 colorPreview.style.backgroundColor = swatch.hex;
                                 colorPreview.classList.add("swatch-preview");
                                 swatchList.style.listStyleType = "none";
@@ -145,15 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 swatchItem.appendChild(colorPreview);
 
                                 swatchList.appendChild(swatchItem);
-                                swatchItem.addEventListener('mouseenter', () => {
-                                    swatchItem.style.transform = 'scale(1.1)';
-                                    swatchItem.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)';
-                                });
-    
-                                swatchItem.addEventListener('mouseleave', () => {
-                                    swatchItem.style.transform = 'scale(1)';
-                                    swatchItem.style.boxShadow = 'none';
-                                });
+                                addHoverEffects(swatchItem);
     
                                 swatchItem.addEventListener('click', function () {
                                     mainSwatch.style.backgroundColor = swatch.hex;
@@ -161,8 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         });
                         listSection.appendChild(swatchList);
-
-                        
 
                     }
                     console.log("Swatches:", color.swatches);
