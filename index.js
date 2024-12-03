@@ -65,10 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             likeButton.addEventListener("click", () => {
                 if (currentColorId) {
+                    const patchUrl = `${url}/${currentColorId}`
                     isLiked = !isLiked;
                     const likesValue = isLiked;
                     likeButton.textContent = isLiked ? "♥" : "♡";
-                    fetch(`${url}/${currentColorId}`, {
+
+                    fetch(patchUrl, {
                         method: "PATCH",
                         headers: {"Content-Type": "application/json",},
                         body: JSON.stringify({ likes: likesValue }),
@@ -86,13 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             //// Like button stuff ////
 
-            
 
             // Start to iterate through colors //
             colors.forEach(color => {
                 currentColorId = color.id;
-
-                
 
                 const colorSwatchDiv = document.createElement("div");
                 colorSwatchDiv.classList.add("color-swatch");
@@ -104,15 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 colorSwatchDiv.style.justifyContent = "center";
                 colorSwatchDiv.style.alignItems = "center";
 
-                    colorSwatchDiv.addEventListener('mouseenter', () => {
-                        colorSwatchDiv.style.transform = 'scale(1.1)';
-                        colorSwatchDiv.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)';
-                    });
-
-                    colorSwatchDiv.addEventListener('mouseleave', () => {
-                        colorSwatchDiv.style.transform = 'scale(1)';
-                        colorSwatchDiv.style.boxShadow = 'none';
-                    });
+                addHoverEffects(colorSwatchDiv);
 
                     colorContainer.appendChild(colorSwatchDiv)
 
