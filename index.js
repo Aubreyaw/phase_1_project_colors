@@ -46,6 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
             colorSwatchDiv.classList.add("color-swatch");
 
             // elements //
+            let currentColorId = null;
+            let isLiked = false;
 
             // Add hover effects //
             function addHoverEffects(element) {
@@ -59,30 +61,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
 
-            likeButton.addEventListener('mouseenter', () => {
-                likeButton.style.transform = 'scale(1.1)';
-                likeButton.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)';
-            });
+            addHoverEffects(likeButton);
 
-            likeButton.addEventListener('mouseleave', () => {
-                likeButton.style.transform = 'scale(1)';
-                likeButton.style.boxShadow = 'none';
-            });
-
-            let currentColorId = null;
-            let isLiked = false;
-    
             likeButton.addEventListener("click", () => {
                 if (currentColorId) {
-                    const patchUrl = `${url}/${currentColorId}`;
                     isLiked = !isLiked;
                     const likesValue = isLiked;
                     likeButton.textContent = isLiked ? "♥" : "♡";
-                    fetch(patchUrl, {
+                    fetch(`${url}/${currentColorId}`, {
                         method: "PATCH",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
+                        headers: {"Content-Type": "application/json",},
                         body: JSON.stringify({ likes: likesValue }),
                     })
                         .then(response => response.json())
