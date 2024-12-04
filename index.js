@@ -1,6 +1,5 @@
 const url = "http://localhost:3000/colors";
 document.addEventListener("DOMContentLoaded", function () {
-   
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -8,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const colors = data;
 
             // elements //
-            //removed appContainer
             const listSection = document.getElementById("list-section");
 
             const colorContainer = document.getElementById("color-container");
@@ -21,14 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
             colorContainer.style.overflowX = "auto";
 
             const previewSection = document.getElementById("preview-section");
-            previewSection.className = "#preview-section"
+            previewSection.className = "#preview-section";
             
             const mainSwatch = document.createElement("div");
             mainSwatch.style.width = "300px";
             mainSwatch.style.height = "300px";
             mainSwatch.style.borderRadius = "10px";
             mainSwatch.style.marginBottom = "10px";
-            mainSwatch.style.marginLeft = "40px"
+            mainSwatch.style.marginLeft = "40px";
             mainSwatch.style.justifyContent = "center";
             
             const swatchList = document.createElement("ul");
@@ -46,78 +44,69 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
 
-           
             // Start to iterate through colors //
-            colors.forEach(color => {
-                currentColorId = color.id;
-
+            colors.forEach((color, index) => {
                 const colorSwatchDiv = document.createElement("div");
                 colorSwatchDiv.classList.add("color-swatch");
                 colorSwatchDiv.style.backgroundColor = color.hex;
-                colorSwatchDiv.style.width = "80px"
-                colorSwatchDiv.style.height = "80px"
+                colorSwatchDiv.style.width = "80px";
+                colorSwatchDiv.style.height = "80px";
                 colorSwatchDiv.style.borderRadius = "10px";
                 colorSwatchDiv.style.display = "flex";
                 colorSwatchDiv.style.justifyContent = "center";
                 colorSwatchDiv.style.alignItems = "center";
 
                 addHoverEffects(colorSwatchDiv);
-                colorContainer.appendChild(colorSwatchDiv)
+                colorContainer.appendChild(colorSwatchDiv);
 
                 colorSwatchDiv.addEventListener("click", function () {
 
                     if (previewSection.contains(mainSwatch)) {
                         previewSection.removeChild(mainSwatch);
-                        
                     }
 
                     const existingSwatchList = previewSection.querySelector("ul");
                     if (existingSwatchList) {
-                    previewSection.removeChild(existingSwatchList);
+                        previewSection.removeChild(existingSwatchList);
                     }
 
-                    
-                        mainSwatch.style.backgroundColor = color.hex;
-                        
-                        previewSection.appendChild(mainSwatch);
-                     
-                        
-                            if (previewSection.contains(swatchList)) {
-                                previewSection.removeChild(swatchList);
+                    mainSwatch.style.backgroundColor = color.hex;
+                    previewSection.appendChild(mainSwatch);
 
-                            } else {
+                    if (previewSection.contains(swatchList)) {
+                        previewSection.removeChild(swatchList);
+                    } else {
+                        swatchList.innerHTML = "";
+                        color.swatches.forEach(swatch => {
+                            const swatchItem = document.createElement("li");
+                            const colorPreview = document.createElement("div");
+                            colorPreview.style.backgroundColor = swatch.hex;
 
-                            swatchList.innerHTML = "";
-                            color.swatches.forEach(swatch => {
+                            colorPreview.classList.add("swatch-preview");
+                            swatchList.style.listStyleType = "none";
+                            swatchList.style.cursor = "pointer";
+                            swatchList.style.padding = 0;
+                            swatchList.style.margin = 0;
+                            swatchList.style.display = "grid";
+                            swatchList.style.gap = "10px";
+                            swatchItem.appendChild(colorPreview);
 
-                                const swatchItem = document.createElement("li");
-                                const colorPreview = document.createElement("div");
+                            swatchList.appendChild(swatchItem);
+                            addHoverEffects(swatchItem);
 
-                                colorPreview.style.backgroundColor = swatch.hex;
-                                
-                                colorPreview.classList.add("swatch-preview");
-                                swatchList.style.listStyleType = "none";
-                                swatchList.style.cursor = "pointer";
-                                swatchList.style.padding = 0;
-                                swatchList.style.margin = 0;
-                                swatchList.style.display = "grid";
-                                swatchList.style.gap = "10px";
-                                swatchItem.appendChild(colorPreview);
-                                
-                                swatchList.appendChild(swatchItem);
-                                addHoverEffects(swatchItem);
-    
-                                swatchItem.addEventListener('click', function () {
-                                    mainSwatch.style.backgroundColor = swatch.hex;
-                                });
-
+                            swatchItem.addEventListener('click', function () {
+                                mainSwatch.style.backgroundColor = swatch.hex;
+                            });
                         });
                         listSection.appendChild(swatchList);
-
                     }
                     console.log("Swatches:", color.swatches);
                 });
+
                 
+                if (index === 0) {
+                    colorSwatchDiv.click();
+                }
             });
         })
         .catch(error => {
@@ -125,26 +114,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
-
-// /* Create three equal columns that float next to each other */
-// .column {
-//     float: left;
-//     width: 33.33%;
-//   }
-  
-//   /* Clear floats after the columns */
-//   .row:after {
-//     content: "";
-//     display: table;
-//     clear: both;
-//   }
-  
-//   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-//   @media screen and (max-width: 600px) {
-//     .column {
-//       width: 100%;
-//     }
-//   }
-/*
-
-*/
