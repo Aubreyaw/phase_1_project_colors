@@ -86,7 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     console.error("No color selected!");
                 }
             });
-            //// Like button stuff ////
+
+            const clearPreviewSection = () => {
+                previewSection.innerHTML = '';
+            };
 
             // Start to iterate through colors //
             colors.forEach(color => {
@@ -121,7 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         previewSection.appendChild(mainSwatch);
                         previewSection.appendChild(likeButton);
                         
-
                             if (previewSection.contains(swatchList)) {
                                 previewSection.removeChild(swatchList);
 
@@ -132,8 +134,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                                 const swatchItem = document.createElement("li");
                                 const colorPreview = document.createElement("div");
-                                
+
                                 colorPreview.style.backgroundColor = swatch.hex;
+                                
                                 colorPreview.classList.add("swatch-preview");
                                 swatchList.style.listStyleType = "none";
                                 swatchList.style.cursor = "pointer";
@@ -142,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 swatchList.style.display = "grid";
                                 swatchList.style.gap = "10px";
                                 swatchItem.appendChild(colorPreview);
-
+                                
                                 swatchList.appendChild(swatchItem);
                                 addHoverEffects(swatchItem);
     
