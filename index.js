@@ -31,23 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
             mainSwatch.style.marginLeft = "40px"
             mainSwatch.style.justifyContent = "center";
             
-            const likeButton = document.createElement("button"); 
-            likeButton.textContent = '♡';  
-            likeButton.style.cursor = "pointer";
-            likeButton.style.color = "red";
-            likeButton.style.borderColor = "white";
-            
             const swatchList = document.createElement("ul");
             swatchList.style.listStyleType = "none";
-
-            const colorInfoDiv = document.createElement("div");
-            previewSection.appendChild(colorInfoDiv);
-            const colorSwatchDiv = document.createElement("div");
-            colorSwatchDiv.classList.add("color-swatch");
-
-            // elements //
-            let currentColorId = null;
-            let isLiked = false;
 
             // Add hover effects //
             function addHoverEffects(element) {
@@ -61,36 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
 
-            addHoverEffects(likeButton);
-
-            likeButton.addEventListener("click", () => {
-                if (currentColorId) {
-                    const patchUrl = `${url}/${currentColorId}`
-                    isLiked = !isLiked;
-                    const likesValue = isLiked;
-                    likeButton.textContent = isLiked ? "♥" : "♡";
-
-                    fetch(patchUrl, {
-                        method: "PATCH",
-                        headers: {"Content-Type": "application/json",},
-                        body: JSON.stringify({ likes: likesValue }),
-                    })
-                        .then(response => response.json())
-                        .then(updatedColor => {
-                            console.log("Updated color:", updatedColor);
-                        })
-                        .catch(error => {
-                            console.error("Error updating color:", error);
-                        });
-                } else {
-                    console.error("No color selected!");
-                }
-            });
-
-            const clearPreviewSection = () => {
-                previewSection.innerHTML = '';
-            };
-
+           
             // Start to iterate through colors //
             colors.forEach(color => {
                 currentColorId = color.id;
@@ -112,17 +68,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     if (previewSection.contains(mainSwatch)) {
                         previewSection.removeChild(mainSwatch);
-                        previewSection.removeChild(likeButton);
+                        
                     }
 
                     const existingSwatchList = previewSection.querySelector("ul");
                     if (existingSwatchList) {
                     previewSection.removeChild(existingSwatchList);
                     }
+
+                    
                         mainSwatch.style.backgroundColor = color.hex;
                         
                         previewSection.appendChild(mainSwatch);
-                        previewSection.appendChild(likeButton);
+                     
                         
                             if (previewSection.contains(swatchList)) {
                                 previewSection.removeChild(swatchList);
