@@ -10,24 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const listSection = document.getElementById("list-section");
 
             const colorContainer = document.getElementById("color-container");
-            colorContainer.style.display = "flex";
-            colorContainer.style.justifyContent = "flex-start";
-            colorContainer.style.alignItems = "center"; 
-            colorContainer.style.gap = "40px"; 
-            colorContainer.style.padding = "30px";
-            colorContainer.style.width = "100%";
-            colorContainer.style.overflowX = "auto";
+            colorContainer.classList.add("color-container")
 
             const previewSection = document.getElementById("preview-section");
             previewSection.className = "#preview-section";
             
             const mainSwatch = document.createElement("div");
-            mainSwatch.style.width = "300px";
-            mainSwatch.style.height = "300px";
-            mainSwatch.style.borderRadius = "10px";
-            mainSwatch.style.marginBottom = "10px";
-            mainSwatch.style.marginLeft = "40px";
-            mainSwatch.style.justifyContent = "center";
+            mainSwatch.classList.add("main-swatch")
             
             const swatchList = document.createElement("ul");
             swatchList.style.listStyleType = "none";
@@ -49,12 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const colorSwatchDiv = document.createElement("div");
                 colorSwatchDiv.classList.add("color-swatch");
                 colorSwatchDiv.style.backgroundColor = color.hex;
-                colorSwatchDiv.style.width = "80px";
-                colorSwatchDiv.style.height = "80px";
-                colorSwatchDiv.style.borderRadius = "10px";
-                colorSwatchDiv.style.display = "flex";
-                colorSwatchDiv.style.justifyContent = "center";
-                colorSwatchDiv.style.alignItems = "center";
+            
 
                 addHoverEffects(colorSwatchDiv);
                 colorContainer.appendChild(colorSwatchDiv);
@@ -83,12 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             colorPreview.style.backgroundColor = swatch.hex;
 
                             colorPreview.classList.add("swatch-preview");
-                            swatchList.style.listStyleType = "none";
-                            swatchList.style.cursor = "pointer";
-                            swatchList.style.padding = 0;
-                            swatchList.style.margin = 0;
-                            swatchList.style.display = "grid";
-                            swatchList.style.gap = "10px";
+                            
                             swatchItem.appendChild(colorPreview);
 
                             swatchList.appendChild(swatchItem);
@@ -110,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => {
             console.error("Error:", error);
-        });
+            
+    });
 });
 
