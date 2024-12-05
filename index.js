@@ -102,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     console.log("Swatches:", color.swatches);
                 });
-
                 
                 if (index === 0) {
                     colorSwatchDiv.click();
