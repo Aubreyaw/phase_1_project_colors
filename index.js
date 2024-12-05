@@ -1,7 +1,13 @@
 const url = "http://localhost:3000/colors";
 document.addEventListener("DOMContentLoaded", function () {
     fetch(url)
-        .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+
         .then(data => {
             console.log("fetched data:", data);
             const colors = data;
@@ -32,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     element.style.boxShadow = 'none';
                 });
             }
-
             // Start to iterate through colors //
             colors.forEach((color, index) => {
                 const colorSwatchDiv = document.createElement("div");
@@ -42,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 addHoverEffects(colorSwatchDiv);
                 colorContainer.appendChild(colorSwatchDiv);
-
                 colorSwatchDiv.addEventListener("click", function () {
 
                     if (previewSection.contains(mainSwatch)) {
@@ -65,11 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             const swatchItem = document.createElement("li");
                             const colorPreview = document.createElement("div");
                             colorPreview.style.backgroundColor = swatch.hex;
-
                             colorPreview.classList.add("swatch-preview");
-                            
                             swatchItem.appendChild(colorPreview);
-
                             swatchList.appendChild(swatchItem);
                             addHoverEffects(swatchItem);
 
