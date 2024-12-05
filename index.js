@@ -7,14 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         return response.json();
     })
-
     .then(data => {
         if (!Array.isArray(data)) {
             throw new Error("Invalid data format: Expected an array.");
         }
             console.log("fetched data:", data);
             const colors = data;
-
             // elements //
             const listSection = document.getElementById("list-section");
 
@@ -46,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 const colorSwatchDiv = document.createElement("div");
                 colorSwatchDiv.classList.add("color-swatch");
                 colorSwatchDiv.style.backgroundColor = color.hex;
-            
 
                 addHoverEffects(colorSwatchDiv);
                 colorContainer.appendChild(colorSwatchDiv);
