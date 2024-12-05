@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
     })
 
-        .then(data => {
+    .then(data => {
+        if (!Array.isArray(data)) {
+            throw new Error("Invalid data format: Expected an array.");
+        }
             console.log("fetched data:", data);
             const colors = data;
 
